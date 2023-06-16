@@ -56,7 +56,7 @@ class NoteController {
       const noteData = {
         name: req.body.name,
         type: "text",
-        color: "#60a5fa",
+        color: "#d9f99d",
       };
       const newNote = await Note.create(noteData);
 
@@ -96,7 +96,7 @@ class NoteController {
       const noteData = {
         name: req.body.name,
         type: "todo",
-        color: "#16a34a",
+        color: "#a5f3fc",
       };
       const newNote = await Note.create(noteData);
       res.send(newNote);

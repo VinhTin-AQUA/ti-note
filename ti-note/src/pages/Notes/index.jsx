@@ -25,11 +25,19 @@ function Notes() {
   }, []);
 
   return (
-    <div className="flex flex-wrap h-full ">
-      {notes.map((note, index) => {
-        return <NoteItem key={index} note={note} />;
-      })}
-    </div>
+    <>
+      {notes.length != 0 ? (
+        <div className="flex flex-wrap h-full ">
+          {notes.map((note, index) => {
+            return <NoteItem key={index} note={note} />;
+          })}
+        </div>
+      ) : (
+        <div className="w-full text-center text-blue-800 text-[40px] mt-10 font-bold underline">
+          No Notes
+        </div>
+      )}
+    </>
   );
 }
 

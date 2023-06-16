@@ -37,17 +37,17 @@ function ChangeSaying() {
 
   return (
     <div className="w-full h-screen">
-      <div className="w-full bg-[#ecfeff] h-12 flex justify-center items-center p-3">
+      <div className="w-full bg-[#ecfeff] h-11 flex justify-center items-center p-3">
         <span className="font-simSun font-bold text-2xl text-[#15803d]">
           Nice Saying
         </span>
         <span></span>
       </div>
 
-      <div className="w-full h-[89%] flex mt-5">
-        <div className="w-[40%] h-full">
+      <div className="w-full h-[89%] flex mt-5 flex-col sm:flex-row">
+        <div className="sm:w-[40%] w-[100%] h-full">
           {/* text  */}
-          <div className="relative w-full min-w-[200px] h-[30%] m-2">
+          <div className="relative w-full min-w-[200px] m-2">
             <textarea
               spellCheck={false}
               onChange={handleChangeNewSaying}
@@ -89,7 +89,7 @@ function ChangeSaying() {
           </div>
         </div>
 
-        <div className="w-[60%] h-full flex flex-col items-centerhttp://localhost:5173/notification">
+        <div className="overflow-y-auto sm:w-[60%] w-[100%] h-full flex flex-col items-centerhttp://localhost:5173/notification">
           {saying.map((say) => {
             return <SayingItem key={say.saying_id} say={say} />;
           })}

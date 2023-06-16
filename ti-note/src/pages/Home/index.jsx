@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 import { getSaying } from "../../api/niceSaying";
@@ -53,16 +52,13 @@ function Home() {
 
   useEffect(() => {
     const lenSaying = saying.length;
-    const lenSlide = lenSaying;
-
-
 
     // su kien thay doi cau noi
     const timeIncSaying = setInterval(() => {
       setSayingIndex((prev) => {
         return prev >= lenSaying - 1 ? 0 : ++prev;
       });
-    }, 3000);
+    }, 4500);
 
     return () => {
       clearInterval(timeIncSaying);
@@ -83,9 +79,9 @@ function Home() {
             })`,
           }}
         >
-          <span className="bg-black/50 p-3 rounded-lg font-simSun font-bold text-center sm:text-[1.5em] text-[0.8em] overflow-hidden leading-tight line-clamp-6">
-            {saying.length !== 0 && saying[sayingIndex].saying_item}
-          </span>
+          <div className="ease-in duration-500 bg-black/50 p-3 rounded-lg font-simSun font-bold text-center sm:text-[1.5em] text-[0.8em] overflow-hidden leading-tight">
+            <p>{saying.length !== 0 && saying[sayingIndex].saying_item}</p>
+          </div>
         </div>
 
         {/* quick text */}

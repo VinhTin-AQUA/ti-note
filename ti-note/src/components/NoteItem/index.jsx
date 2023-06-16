@@ -47,7 +47,7 @@ function NoteItem({ note }) {
         to={note.deletedAt !== null ? "" : linkEdit}
         state={{ noteData: note }}
       >
-        <div className="ml-2 w-[135px] h-[65px] overflow-hidden leading-tight line-clamp-3 ">
+        <div className="font-monotype-corsiva text-[#083344] text-[19px] font-bold ml-2 w-[135px] h-[65px] overflow-hidden leading-tight line-clamp-3 ">
           {note.name}
         </div>
         <span className="text-[0.8em] relative top-5 left-3 select-none">

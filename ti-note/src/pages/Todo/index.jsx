@@ -27,17 +27,24 @@ function Todo() {
   }, []);
 
   return (
-    <div className="flex flex-wrap h-full ">
-      {notes.map((note, index) => {
-        return <NoteItem key={index} note={note} />;
-      })}
-
-      <Link  to="/notes/edit-todo-note">
+    <>
+      {notes.length != 0 ? (
+        <div className="flex flex-wrap h-full ">
+          {notes.map((note, index) => {
+            return <NoteItem key={index} note={note} />;
+          })}
+        </div>
+      ) : (
+        <div className="w-full text-center text-[40px] text-blue-800 mt-10 font-bold underline">
+          No Todo Note
+        </div>
+      )}
+      <Link to="/notes/edit-todo-note">
         <div className="fixed right-2 bottom-2 cursor-pointer hover:text-white text-blue-900 hover:bg-blue-900 rounded-full duration-150">
           <IoIosAddCircle size={50} />
         </div>
       </Link>
-    </div>
+    </>
   );
 }
 
