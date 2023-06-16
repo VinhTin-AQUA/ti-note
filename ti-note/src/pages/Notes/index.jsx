@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getNotes, getTextNotes } from "../../api/note";
+import { getNotes } from "../../api/note";
 import NoteItem from "../../components/NoteItem";
 
 function Notes() {
