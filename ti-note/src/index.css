@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.search:focus{
+		@apply  shadow-[0_5px_5px_-1px_rgba(239,246,255,0.5)]
+	}
+
+	.search{
+		@apply duration-300
+	}
+
+	.item-menu {
+		@apply hover:bg-white hover:border-r-black border-r-2 duration-100
+	}
+}
+
+body {
+	/*overflow-x: hidden;*/
+	height: 100%;
+}

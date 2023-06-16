@@ -1,0 +1,138 @@
+/*custom*/
+.ql-container {
+  height: 100%;
+}
+
+.ql-picker-label {
+  overflow: hidden;
+}
+
+.ql-toolbar {
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+}
+
+.hidden-container {
+  height: 43px;
+}
+
+/* Set content for font-families */
+.ql-font-arial,
+.ql-font span[data-value="arial"]::before {
+  font-family: Arial, sans-serif;
+}
+.ql-font-comic-sans,
+.ql-font span[data-value="comic-sans"]::before {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.ql-font-courier-new,
+.ql-font span[data-value="courier-new"]::before {
+  font-family: "Courier New";
+}
+.ql-font-georgia,
+.ql-font span[data-value="georgia"]::before {
+  font-family: Georgia, serif;
+}
+.ql-font-helvetica,
+.ql-font span[data-value="helvetica"]::before {
+  font-family: Helvetica, sans-serif;
+}
+.ql-font-Inter,
+.ql-font span[data-value="Inter"]::before {
+  font-family: "Inter", sans-serif;
+}
+.ql-font-lucida,
+.ql-font span[data-value="lucida"]::before {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.ql-font-times-new-roman,
+.ql-font span[data-value="times-new-roman"]::before {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Set content for sizes */
+
+@media only screen and (max-width: 1303px) {
+  .hidden-container {
+    height: 68.5px;
+  }
+}
+
+.ql-size-8px {
+  font-size: 8px !important;
+}
+
+.ql-size-10px {
+  font-size: 10px !important;
+}
+
+.ql-size-12px {
+  font-size: 12px !important;
+}
+
+.ql-size-14px {
+  font-size: 14px !important;
+}
+
+.ql-size-16px {
+  font-size: 16px !important;
+}
+
+.ql-size-20px {
+  font-size: 20px !important;
+}
+
+.ql-size-24px {
+  font-size: 24px !important;
+}
+
+.ql-size-26px {
+  font-size: 26px !important;
+}
+
+.ql-size-28px {
+  font-size: 28px !important;
+}
+
+.ql-size-36px {
+  font-size: 36px !important;
+}
+
+.ql-size-48px {
+  font-size: 48px !important;
+}
+
+/* ==================== */
+.ql-editor {
+  min-height: 50vh;
+  font-size: 16px;
+  width: 100%;
+}
+
+.App .ql-snow .ql-tooltip.ql-flip {
+  left: 17px !important;
+  width: 100%;
+  white-space: normal;
+}
+
+/* custom toolbars: save, search */
+
+@media only screen and (max-width: 796px) {
+  .ql-container {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .ql-container {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 446px) {
+  .ql-container {
+    margin-top: 60px;
+  }
+}
