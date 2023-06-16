@@ -91,6 +91,20 @@ class TodoController {
     }
   }
 
+  async deleteAllTodosOfNote(req, res, next) {
+    try {
+      const note_id = req.params.note_id;
+
+      const deleteTodos = await Todo.destroy({
+        where: {
+          note_id: note_id,
+        },
+      });
+      res.send(deleteTodos);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 module.exports = new TodoController();

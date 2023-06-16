@@ -8,4 +8,14 @@ async function getTextOfNote(note_id) {
     console.log(error);
   }
 }
-export { getTextOfNote };
+
+async function deleteAllTextOfNote(note_id) {
+  try {
+    const text = await http.delete(`/text-note/delete-all-text-of-note/${note_id}`);
+    return text;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { getTextOfNote, deleteAllTextOfNote };

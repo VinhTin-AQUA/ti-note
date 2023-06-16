@@ -1,5 +1,6 @@
 import http from "../../http-common";
-import { saveTodo } from "./todo";
+import { saveTodo, deleteAllTodosOfNote } from "./todo";
+import { deleteAllTextOfNote } from "./textNote";
 
 async function getNotes() {
   try {
@@ -102,9 +103,16 @@ async function deleteNote(note) {
 
 async function permanentlyDeleteNote(note) {
   try {
+    if (note.type === "text") {
+      deleteAllTextOfNote(note.note_id);
+    } else if (note.type === "todo") {
+      deleteAllTodosOfNote(note.note_id);
+    }
+
     const notes = await http.delete(
       `/notes/permanently-delete-note/${note.note_id}`
     );
+
     return notes;
   } catch (error) {
     log(error);

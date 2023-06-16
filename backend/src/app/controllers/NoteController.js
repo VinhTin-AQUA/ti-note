@@ -139,7 +139,7 @@ class NoteController {
     try {
       let note_id = req.params.note_id;
       await Note.destroy({ where: { note_id: note_id }, force: true });
-      res.send(id);
+      res.send(note_id);
     } catch (error) {
       next(error);
     }

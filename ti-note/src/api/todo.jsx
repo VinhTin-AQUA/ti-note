@@ -45,12 +45,20 @@ async function updateTodo(_todo) {
   }
 }
 
-
+async function deleteAllTodosOfNote(note_id) {
+  try {
+    const todo = await http.delete(`/todo/delete-all-todos-of-note/${note_id}`);
+    return todo;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export {
   saveTodo,
   getTodosOfNote,
   addTodo,
   removeTodo,
-  updateTodo
+  updateTodo,
+  deleteAllTodosOfNote,
 };
